@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Triangulo_HACB.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Triangulo" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Base"/>
+        <Entry Placeholder="Base" x:Name="Base" Keyboard="Numeric"/>
+        <Label Text="Altura"/>
+        <Entry Placeholder="Altura" x:Name="Altura" Keyboard="Numeric"/>
+        <Label Text="Lados"/>
+        <Entry Placeholder="Primer lado" x:Name="PrimerLado" Keyboard="Numeric"/>
+        <Entry Placeholder="Segundo lado" x:Name="SegundoLado" Keyboard="Numeric"/>
+        <Button Text="Calcula Triangulo" Clicked="Button_Clicked"/>
+        <Label Text="Tipo de triangulo"/>
+        <Label Text="Area"/>
+        <Entry Placeholder="Area" x:Name="Area" Keyboard="Numeric"/>
+        <Label Text="Imagen del tipo de triangulo"/>
+
+    </StackLayout>
+
+</ContentPage>
