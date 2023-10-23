@@ -28,21 +28,37 @@ namespace Triangulo_HACB
             Area.Text = area.ToString();
 
             string resultado = "";
-            if(lado1 == bas3 && lado2==bas3)
+            if (lado1 + lado2 < bas3 || lado1 + bas3 < lado2 || lado2 + bas3 < lado1)
             {
-                resultado = "Triangulo Equilatero";
+                resultado = "No es un triangulo";
             }
-            else if(lado1==bas3&&lado2!=bas3)
+            else
             {
-                resultado = "Triangulo Isóscele";
-            }
-            else if(lado1!=bas3&&lado2!=bas3)
-            {
-                resultado = "Triangulo Escaleno";
+
+                if (lado1 == bas3 && lado2 == bas3)
+                {
+                    resultado = "Triangulo Equilátero";
+                    ImgEquilatero.IsVisible = true;
+                    Imgisosceles.IsVisible = false;
+                    ImgEscaleno.IsVisible = false;
+
+                }
+                else if (lado1 == bas3 && lado2 != bas3)
+                {
+                    resultado = "Triangulo Isósceles";
+                    Imgisosceles.IsVisible = true;
+                    ImgEquilatero.IsVisible = false;
+                    ImgEscaleno.IsVisible = false;
+                }
+                else if (lado1 != bas3 && lado2 != bas3)
+                {
+                    resultado = "Triangulo Escaleno";
+                    ImgEscaleno.IsVisible = true;
+                    ImgEquilatero.IsVisible = false;
+                    Imgisosceles.IsVisible = false;
+                }
             }
             DisplayAlert("Resultado:", resultado, "Quita");
-
-
 
         }
     }
